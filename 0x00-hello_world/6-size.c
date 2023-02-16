@@ -9,7 +9,7 @@
 int main(void)
 {
 	char charSize;
-	
+
 	int intSize;
 
 	long int longInt;
