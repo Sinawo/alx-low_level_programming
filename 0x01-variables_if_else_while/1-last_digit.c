@@ -4,7 +4,8 @@
 /**
  * main - Entry point
  *
- * This main function prints n and the last digit of n and states if the last digit is > 5 or 6 or is 0
+ * This main function prints n and the last digit of n and states 
+ * if the last digit is > 5 or 6 or is 0
  *
  * Return: Always 0 (Success)
  */
