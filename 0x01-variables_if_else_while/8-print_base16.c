@@ -16,6 +16,12 @@ int main(void)
 
 	while (ch <= last_digit)
 	{
+		if (ch == '9')
+		{
+			putchar(ch);
+			ch = 'a';
+			last_digit = 'f';
+		}
 		putchar(ch);
 		ch++;
 	}
