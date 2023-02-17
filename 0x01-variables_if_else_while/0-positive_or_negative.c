@@ -5,7 +5,7 @@
  * main - Entry point
  *
  * This main function states whether the number is +/- or zero
- * 
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
