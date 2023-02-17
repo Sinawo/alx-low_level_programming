@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-
-/*This main function states whether the number is +/- or zero*/
+/**
+ * The entry point
+ *
+ * This main function states whether the number is +/- or zero
+ */
 int main(void)
 {
 	int n;
