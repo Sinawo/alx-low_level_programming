@@ -5,7 +5,7 @@
  * main - Entry point
  *
  * This main function prints alphabet in lowercase except q and e
- * 
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -15,7 +15,7 @@ int main(void)
 	while (ch <= 'z')
 	{
 		if (ch == 'e' || ch == 'q')
-                        ch++;
+			ch++;
 		putchar(ch);
 		ch++;
 	}
