@@ -7,7 +7,13 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+void print_alphabet(void)
 {
-	return (0);
+	char ch = 'a';
+
+        while (ch <= 'z')
+        {
+                _putchar(ch);
+                ch++;
+	}
 }
