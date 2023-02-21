@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet - function
+ * print_alphabet function
  *
- * this print_alphabet_x10: function
+ * print_alphabet_x10: function
  * Description: This function prints alphabet 10x times in lowercase
  *
- * Return: aphabet std output
+ * Return: aphabetx10 std output
  */
 void print_alphabet_x10(void)
 {
