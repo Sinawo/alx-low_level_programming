@@ -7,6 +7,11 @@
  *
  * Return: Always 0 (Success)
  */
+/**
+ *
+ * Description: This main function prints alphabet in lowercase
+ *
+ */
 void print_alphabet(void)
 {
 	char ch = 'a';
