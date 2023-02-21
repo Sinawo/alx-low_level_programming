@@ -3,8 +3,7 @@
 /**
  * print_alphabet - function
  *
- * print_alphabet_x10: function
- *
+ * this print_alphabet_x10: function
  * Description: This function prints alphabet 10x times in lowercase
  *
  * Return: aphabet std output
