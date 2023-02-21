@@ -2,5 +2,5 @@
 chmod u+x *
 git add .
 read -p "Enter commit message: " data
-git commit -m "{$data}"
+git commit -m "$data"
 git push
