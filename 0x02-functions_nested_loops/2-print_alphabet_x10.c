@@ -3,7 +3,7 @@
 /**
  * print_alphabet - function
  *
- * Description: This function prints alphabet in lowercase
+ * Description: This function prints alphabet 10x times in lowercase
  *
  * Return: aphabet std output
  */
@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 
 	int count;
 
-	for(count = 0, ch = 'a'; count < 10; count++)
+	for (count = 0, ch = 'a'; count < 10; count++)
 	{
 		while (ch <= 'z')
 		{
