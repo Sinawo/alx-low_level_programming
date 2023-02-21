@@ -1,5 +1,5 @@
 #include <stdio.h>
-char *_putchar(char *ch)
+int _putchar(int ch)
 {
-	return ch;
+	return putchar(ch);
 }

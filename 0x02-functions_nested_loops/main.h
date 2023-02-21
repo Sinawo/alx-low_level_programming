@@ -3,4 +3,4 @@
  * output
  * Return: 1 or 0
  */
-char *_putchar(char *str);
+int _putchar(int ch);
