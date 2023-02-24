@@ -1,8 +1,7 @@
 #include "main.h"
 /**
  * _isupper - checks if uppercase
- *
- * we use character c to compare 
+ * @c: character to chec
  *
  * Return: gives 1 or 0
  */
