@@ -170,4 +170,11 @@ void swap_int(int *a, int *b);
  */
 int _strlen(char *s);
 
+
+/**
+ * _puts - prins string followed by newline
+ * @str: string var to return
+ */
+
+void _puts(char *str);
 #endif
