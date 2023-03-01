@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "_putchar.c"
+#include "main.h"
 /**
  * print_array - prints string woth commas
  * @a: array of integers
