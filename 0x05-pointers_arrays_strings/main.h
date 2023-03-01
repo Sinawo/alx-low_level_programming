@@ -177,4 +177,11 @@ int _strlen(char *s);
  */
 
 void _puts(char *str);
+
+/**
+ * print_rev - print the string in reversr
+ * @s: string to reverse
+ */
+
+void print_rev(char *s);
 #endif
