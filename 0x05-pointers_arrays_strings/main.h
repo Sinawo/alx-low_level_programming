@@ -184,4 +184,12 @@ void _puts(char *str);
  */
 
 void print_rev(char *s);
+
+/**
+ * rev_string - reverse a string
+ * @s: string to reverse
+ */
+void rev_string(char *s);
+
+
 #endif
