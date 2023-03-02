@@ -15,7 +15,7 @@ char *_strcat(char *dest, char *src)
 
 	int indx2;
 	
-	for (indx2 = _strlen(dest); indx1 < _strlen(src);)
+	for (indx2 = _strlen(dest); src[indx1] != '\0';)
 	{
 		dest[indx2++] = src[indx1++];
 	}
