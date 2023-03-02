@@ -197,7 +197,10 @@ void puts_half(char *str);
 
 void print_array(int *a, int n);
  
-/*======================================0x06-pointers_arrays_strings================*/
+/**
+ * ======================================0x06-pointers_arrays_strings============
+ */
+
 /**
  * _strncat - concatenates(combines) two strings
  * @n: uses at most n bytes from @src
