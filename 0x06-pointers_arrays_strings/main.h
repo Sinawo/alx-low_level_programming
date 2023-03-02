@@ -210,4 +210,12 @@ void print_array(int *a, int n);
  */
 char *_strncat(char *dest, char *src, int n);
 
+/**
+ * _strcat - concatenates(combines) two strings
+ * @src: does not need to be null-terminated if it contains n or more bytes
+ * @dest: Return a pointer to the resulting string
+ * Return: a pinter to the resulting string
+ */
+char *_strcat(char *dest, char *src);
+
 #endif
