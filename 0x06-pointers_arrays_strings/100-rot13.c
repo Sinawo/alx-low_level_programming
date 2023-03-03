@@ -19,7 +19,10 @@ char *rot13(char *str)
 		for (indx1 = 0; indx1 < _strlen(input); indx1++)
 		{
 			if (str[i] == input[indx1])
+			{
 				str[i] = output[indx1];
+				break;
+			}
 		}
 	}
 
