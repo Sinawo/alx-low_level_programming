@@ -1,3 +1,4 @@
+#include "stringlength.c"
 /**
  * cap_string -  capitalizes all words of a string
  *
@@ -26,6 +27,8 @@ char *cap_string(char *str)
 			case ')':
 			case '{':
 			case '}':
+				if (str[i] == str[_strlen(str) - 1])
+					break;
 				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 					str[i + 1] -= 32;
 				break;
