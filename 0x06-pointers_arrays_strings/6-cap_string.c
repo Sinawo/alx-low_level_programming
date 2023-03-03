@@ -1,13 +1,10 @@
-#include "stringlength.c"
 /**
  * cap_string -  capitalizes all words of a string
  *
  * @str: This is the string to capitalize.
  *
- * Return: This function returns the pointer to the copied string
+ * Return: This function returns the capitalize string
  */
-
-
 char *cap_string(char *str)
 {
 	int i;
