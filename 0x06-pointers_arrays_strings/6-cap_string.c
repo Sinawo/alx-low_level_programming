@@ -8,40 +8,31 @@
  *
  * Return: This function returns the capitalize string
  */
-char *cap_string(char *str)
+char *cap_string(char *n)
 {
-	int i;
-	bool separator = false;
+	int i, x;
+	int cap = 32;
+	int separators[] = {',', ';', '.', '?', '"',
+		 '(', ')', '{', '}', ' ', '\n', '\t'};
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		if (separator)
+		if (n[i] >= 'a' && n[i] <= 'z')
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-				str[i] -= 32;
+			n[i] = n[i] - cap;
 		}
-		switch (str[i])
-		{
-			case ' ':
-			case '\t':
-			case '\n':
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
-				separator = true;
-				break;
-			default:
-				separator = false;
-				break;
 
+		cap = 0;
+
+		for (x = 0; x <= 12; x++)
+		{
+			if (n[i] == separators[x])
+			{
+				x = 12;
+				cap = 32;
+			}
 		}
 	}
-	return (str);
+	return (n);
+
 }
