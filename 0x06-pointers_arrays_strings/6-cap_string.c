@@ -1,4 +1,6 @@
 #include "stringlength.c"
+#include <stdbool.h>
+
 /**
  * cap_string -  capitalizes all words of a string
  *
@@ -9,9 +11,15 @@
 char *cap_string(char *str)
 {
 	int i;
+	bool separator = false;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
+		if (separator)
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+				str[i] -= 32;
+		}
 		switch (str[i])
 		{
 			case ' ':
@@ -27,12 +35,10 @@ char *cap_string(char *str)
 			case ')':
 			case '{':
 			case '}':
-				if (str[i] == str[_strlen(str) - 1])
-					break;
-				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-					str[i + 1] -= 32;
+				separator = true;
 				break;
 			default:
+				separator = false;
 				break;
 
 		}
