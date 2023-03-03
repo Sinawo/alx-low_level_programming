@@ -1,27 +1,36 @@
-#include "stringlength.c"
 /**
- * _strncpy - copies a string
+ * cap_string -  capitalizes all words of a string
  *
- * @n: The number of characters to be copied from source
- * @src: This is the string to be copied.
- * @dest: This is pointer to the destination array ehere the content
- * is to be copied
+ * @str: This is the string to capitalize.
  *
- * Return: This function returns the pointer to the copied string
+ * Return: This function returns the capitalize string
  */
-char *_strncpy(char *dest, char *src, int n)
+char *cap_string(char *str)
 {
-	int indx1;
+	int i;
 
-	for (indx1 = 0; indx1 < n && src[indx1] != '\0'; indx1++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		dest[indx1] = src[indx1];
+		if (str[i] == ' ' || str[i] == ',' || str[i] == '!' || str[i] == '.')
+		{
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] = str[i + 1] - 32;
+		}
+		else if (str[i] == '\t')
+		{
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] = str[i + 1] - 32;
+		}
+		else if (str[i] == '\n' || str[i] == '?')
+		{
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] = str[i + 1] - 32;
+		}
+		else if (str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
+		{
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] = str[i + 1] - 32;
+		}
 	}
-	while (indx1 < n)
-	{
-		dest[indx1] = '\0';
-		indx1++;
-	}
-	
-	return (dest);
+	return (str);
 }
