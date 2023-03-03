@@ -11,25 +11,27 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ' || str[i] == ',' || str[i] == '!' || str[i] == '.')
+		switch(str[i])
 		{
-			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-				str[i + 1] = str[i + 1] - 32;
-		}
-		else if (str[i] == '\t' || str[i] == ';')
-		{
-			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-				str[i + 1] = str[i + 1] - 32;
-		}
-		else if (str[i] == '\n' || str[i] == '?')
-		{
-			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-				str[i + 1] = str[i + 1] - 32;
-		}
-		else if (str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
-		{
-			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-				str[i + 1] = str[i + 1] - 32;
+			case ' ':
+			case '\t':
+			case '\n':
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+					str[i + 1] = str[i + 1] - 32;
+				break;
+			default:
+				break;
+
 		}
 	}
 	return (str);
