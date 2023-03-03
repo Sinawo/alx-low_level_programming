@@ -1,27 +1,39 @@
-char *cap_string(char *n)
+#include "stringlength.c"
+#include <stdbool.h>
+/**
+ * _indexOf - returns boolean if special  character
+ * @a: character to return
+ * Return: true or false
+ */
+int _indexOf(char a)
 {
-	int i, x;
-	int cap = 32;
-	int separators[] = {',', ';', '.', '?', '"',
-		 '(', ')', '{', '}', ' ', '\n', '\t'};
+	int i;
+	char capArr[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?', '(',
+')', '{', '}'};
 
-	for (i = 0; n[i] != '\0'; i++)
+	for (i = 0; i < 13; i++)
 	{
-		if (n[i] >= 'a' && n[i] <= 'z')
-		{
-			n[i] = n[i] - cap;
-		}
-
-		cap = 0;
-
-		for (x = 0; x <= 12; x++)
-		{
-			if (n[i] == separators[x])
-			{
-				x = 12;
-				cap = 32;
-			}
-		}
+		if (capArr[i] == a)
+			return (1);
 	}
-	return (n);
+	return (0);
+}
+/**
+ * cap_string - capitalizes the string
+ * @s: string
+ * Return: the string capitalized
+ */
+char *cap_string(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (_indexOf(s[i]))
+			continue;
+		if (s[i] >= 'a' && s[i] <= 'z' && (_indexOf(s[i - 1]) || i == 0))
+			s[i] = s[i] - 32;
+
+	}
+	return (s);
 }

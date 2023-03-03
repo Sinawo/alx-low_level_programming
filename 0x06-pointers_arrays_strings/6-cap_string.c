@@ -1,39 +1,45 @@
 #include "stringlength.c"
 #include <stdbool.h>
+
 /**
- * _indexOf - returns boolean if special  character
- * @a: character to return
- * Return: true or false
+ * cap_string -  capitalizes all words of a string
+ *
+ * @str: This is the string to capitalize.
+ *
+ * Return: This function returns the capitalize string
  */
-int _indexOf(char a)
+char *cap_string(char *str)
 {
 	int i;
-	char capArr[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?', '(',
-')', '{', '}'};
+	bool separator = false;
 
-	for (i = 0; i < 13; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (capArr[i] == a)
-			return (1);
-	}
-	return (0);
-}
-/**
- * cap_string - capitalizes the string
- * @s: string
- * Return: the string capitalized
- */
-char *cap_string(char *s)
-{
-	int i;
+		if (str[i] >= 'a' && str[i] <= 'z' && (separator || i == 0))
+			str[i] -= 32;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (_indexOf(s[i]))
-			continue;
-		if (s[i] >= 'a' && s[i] <= 'z' && (_indexOf(s[i - 1]) || i == 0))
-			s[i] = s[i] - 32;
+		switch (str[i])
+		{
+			case ' ':
+			case '\t':
+			case '\n':
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+				separator = true;
+				break;
+			default:
+				separator = false;
+				break;
 
+		}
 	}
-	return (s);
+	return (str);
 }
