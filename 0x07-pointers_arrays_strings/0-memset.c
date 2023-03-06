@@ -1,20 +1,18 @@
 /**
  * _memset - fills memory with a constant byte
- *
- * @ptr - 'Starting address' of memory to be filled
- * @b - Constant byte or Value to be filled
- * @n - Number of bytes to be filled starting from ptr to be filled
- *
+ * @s: the pointer to be filled provided starting address
+ * @b: constant byte or Value to be filled
+ * @n: number of bytes to be filled starting from ptr to be filled
  * Return: a pointer to the memory araa s
  */
-char *_memset(char *ptr, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
-	for (i = *ptr; i < n; i++)
+	for (i = *s; i < n; i++)
 	{
-		*(ptr + i) = b;
+		*(s + i) = b;
 	}
-	return (ptr);
+	return (s);
 
 }
