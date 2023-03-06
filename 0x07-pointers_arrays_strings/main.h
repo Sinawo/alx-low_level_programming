@@ -240,4 +240,7 @@ void print_number(int n);
  * ==========================================0x07-pointers_arrays_strings==============
  */
 char *_memset(char *s, char b, unsigned int n);
+
+char *_memcpy(char *dest, char *src, unsigned int n);
+
 #endif
