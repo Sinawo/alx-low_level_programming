@@ -11,14 +11,14 @@
  */
 char *_strchr(char *s, char c)
 {
+
 	int i;
-	bool found = false;
 	int len = _strlen(s);
 
 	for (i = 0; i < len; i++)
 	{
 		if (s[i] == c)
-			found = true;;
+			return (s + i);
 	}
-	return (found ? s + i : NULL);
+	return ((s[i] == c) ? s + i : NULL);
 }
