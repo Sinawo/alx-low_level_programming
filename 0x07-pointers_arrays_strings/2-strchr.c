@@ -2,11 +2,12 @@
 #include <stddef.h>
 #include <stdbool.h>
 /**
- * strchr - locates a character in a string
+ * _strchr - locates a character in a string
  * @s: string passed
  * @c: character to locate in the string s
- * Return: a pointer(array or string) to the first occurrence of the character c in the
- * string s, or NULL if the character is not found
+ *
+ * Return: a pointer(array or string) to the first occurrence
+ * of the character c in the string s, or NULL if the character is not found
  */
 char *_strchr(char *s, char c)
 {
@@ -18,5 +19,5 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 			return (s + i);
 	}
-	return NULL;
+	return (NULL);
 }
