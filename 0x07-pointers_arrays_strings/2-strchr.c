@@ -1,4 +1,3 @@
-#include "stringlength.c"
 #include <stddef.h>
 #include <stdbool.h>
 /**
@@ -13,9 +12,8 @@ char *_strchr(char *s, char c)
 {
 
 	int i;
-	int len = _strlen(s);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 			return (s + i);
