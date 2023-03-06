@@ -1,4 +1,3 @@
-#include "stringlength.c"
 #include <stddef.h>
 #include <stdbool.h>
 /**
@@ -13,12 +12,11 @@ char *_strchr(char *s, char c)
 {
 	int i;
 	bool found = false;
-	int len = _strlen(s);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
-			found = true;;
+			found = true;
 	}
 	return (found ? s + i : NULL);
 }
