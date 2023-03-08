@@ -253,4 +253,6 @@ char *_strpbrk(char *s, char *accept);
 0x08. C - Recursion================================*/
 
 void _puts_recursion(char *s);
+
+void _print_rev_recursion(char *s);
 #endif
