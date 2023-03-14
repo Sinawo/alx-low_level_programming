@@ -4,8 +4,8 @@
 #include "_strlen.c"
 /**
  * alloc_grid - creates a 2D array
- * @width: 1st array size(width)
- * @height: 2nd array size(height)
+ * @totalColumns: 1st array size(colums)
+ * @totalRows: 2nd array size(rows)
  * Return:  pointer to a 2D array
  */
 int **alloc_grid(int totalColumns, int totalRows)
@@ -18,17 +18,20 @@ int **alloc_grid(int totalColumns, int totalRows)
 		return (NULL);
 	ptr2arr = (int **)malloc(totalRows * sizeof(int *));
 	if (ptr2arr == NULL)
+	{
+		free(ptr2arr);
 		return (NULL);
-	/* creates 1D array */
+	}
 	for (row = 0; row < totalRows; row++)
 	{
 		ptr2arr[row] = (int *)malloc(totalColumns * sizeof(int));
-		/*Allocate memory for inner array ^*/
 		if (ptr2arr[row] == NULL)
+		{
+			free(ptr2arr);
 			return (NULL);
+		}
 		for (column = 0; column < totalColumns; column++)
 			ptr2arr[row][column] = 0;
 	}
-	free(ptr2arr);
 	return (ptr2arr);
 }
