@@ -1,34 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "_strlen.c"
+
 /**
- * alloc_grid - creates a 2D array
- * @width: 1st array size(width)
- * @height: 2nd array size(height)
- * Return:  pointer to a 2D array
+ * free_grid - frees a 2 dimensional gri
+ * @grid: 2D array
+ * @height: array size(height)
+ * Return: Nothing
  */
-int **alloc_grid(int width, int height)
+
+void free_grid(int **grid, int height)
 {
-	int **arr;
-	int x, y;
+	int y;
 
-	if (width <= 0 || height <= 0)
-		return (NULL);
-	arr = (int **)malloc(height * sizeof(int *));
-	if (arr == NULL)
-		return (NULL);
-
+	if (grid == NULL || height <= 0)
+		return;
+	
 	for (y = 0; y < height; y++)
-	{
-		arr[y] = (int *)malloc(width * sizeof(int));
-		if (arr[y] == NULL)
-			return (NULL);
-	}
-	for (x = 0; x < height; x++)
-	{
-		for (y = 0; y < width; y++)
-			arr[x][y] = 0;
-	}
-	return (arr);
+		free(grid[y]);
+	free(grid);
 }
