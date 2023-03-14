@@ -29,6 +29,5 @@ int **alloc_grid(int totalColumns, int totalRows)
 		for (column = 0; column < totalColumns; column++)
 			ptr2arr[row][column] = 0;
 	}
-	free(ptr2arr);
 	return (ptr2arr);
 }
