@@ -27,6 +27,8 @@ int **alloc_grid(int totalColumns, int totalRows)
 		ptr2arr[row] = (int *)malloc(totalColumns * sizeof(int));
 		if (ptr2arr[row] == NULL)
 		{
+			for (column = 0; column < totalColumns; column++)
+				free(ptr2arr[column]);
 			free(ptr2arr);
 			return (NULL);
 		}
