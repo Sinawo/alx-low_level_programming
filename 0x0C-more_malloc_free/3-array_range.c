@@ -5,7 +5,6 @@
  * @max: char that initializes am array
  * Return: NULL if size = 0 otherwise pointer to the array
  */
-
 int *array_range(int min, int max)
 {
 	int *arr;
@@ -14,12 +13,11 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	arr = malloc(sizeof(int) * (max - min));
+	arr = malloc(sizeof(int) * size + 1);
 	if (arr == NULL)
 		return (NULL);
-	for (i = 0; i < size; i++, min++)
+	for (i = 0; min <  max; i++, min++)
 		*(arr + i) = min;
-
-
+	arr[min] = max;	
 	return (arr);
 }
