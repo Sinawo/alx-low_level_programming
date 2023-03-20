@@ -1,5 +1,6 @@
 #ifndef _DOG_H
 #define _DOG_H
+
 /**
  * struct dog - Short description
  * @name: First member
@@ -20,4 +21,6 @@ struct dog
 	 * using this method.
 	 */
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
