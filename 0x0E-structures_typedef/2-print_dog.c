@@ -3,10 +3,7 @@
 #include <stdio.h>
 #include <stddef.h>
 /**
- * init_dog - initialise variables of dog struct
- * @name: First member
- * @age: Second member
- * @owner: Third member
+ * print_dog - prints dog struct elements
  * @d: pointer to he dog struct in mem
  */
 void print_dog(struct dog *d)
