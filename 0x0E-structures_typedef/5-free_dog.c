@@ -1,15 +1,17 @@
-#include "dog.h"
-#include <stdlib.h>
+
 /**
  * free_dog - free dog from mem (cleans mem after dog is created
  * @d: dog structure 
  */
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
+	if (d)
 	{
-		free(d->name);
-		free(d->owner);
+		if (d->name)
+			free(d->name);
+		if (d->owner)
+			free(d->owner);
 		free(d);
 	}
+
 }
